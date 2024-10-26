@@ -1,0 +1,176 @@
+---
+title: Exports
+description: fr_garages Exports
+updated: 2024-10-26
+authors: [feenko, stripsior]
+---
+
+## Server-side functions
+
+### `GetVehicles`
+
+Returns a table of vehicles that are currently parked at the specified location.
+
+<p className='text-sm text-muted-foreground'>Syntax</p>
+
+```lua
+-- @param parking (string) - The name of the parking location
+-- @return (table) - A table of vehicles that are currently parked at the specified location
+function GetVehicles(parking)
+```
+
+<p className='text-sm text-muted-foreground'>Example usage</p>
+
+```lua
+local vehicles = exports['fr_garages']:GetVehicles("main")
+print(vehicles)
+```
+
+<p className='text-sm text-muted-foreground'>Example output</p>
+
+```lua
+{
+    {
+        owner = "char1:1oajsdhj123ASUDEGH12",
+        second_owner = nil,
+        plate = "FRACTIFY",
+        model = "adder",
+        properties = {
+            modRightFender = -1,
+            modRoof = -1,
+            modPlateHolder = -1,
+            interiorColor = 0,
+            modEngine = -1,
+            -- ...
+        },
+        slot = 1
+    }
+}
+```
+
+### `IsPlayerOwner`
+
+Returns whether the specified player is the owner of the specified vehicle.
+
+<p className='text-sm text-muted-foreground'>Syntax</p>
+
+```lua
+-- @param player (number) - The ID of the player
+-- @param plate (string) - The plate of the vehicle
+-- @return (boolean) - Whether the specified player is the owner of the specified vehicle
+function IsPlayerOwner(player, plate)
+```
+
+<p className='text-sm text-muted-foreground'>Example usage</p>
+
+```lua
+local isOwner = exports['fr_garages']:IsPlayerOwner(2, "FRACTIFY")
+print(isOwner)
+```
+
+<p className='text-sm text-muted-foreground'>Example output</p>
+
+```lua
+true
+```
+
+### `IsCarParked`
+
+Returns whether the specified vehicle is currently parked.
+
+<p className='text-sm text-muted-foreground'>Syntax</p>
+
+```lua
+-- @param plate (string) - The plate of the vehicle
+-- @return (boolean) - Whether the specified vehicle is currently parked
+function IsCarParked(plate)
+```
+
+<p className='text-sm text-muted-foreground'>Example usage</p>
+
+```lua
+local isParked = exports['fr_garages']:IsCarParked("FRACTIFY")
+print(isParked)
+```
+
+<p className='text-sm text-muted-foreground'>Example output</p>
+
+```lua
+true
+```
+
+### `SetOwner`
+
+Sets the owner of the specified vehicle.
+
+<p className='text-sm text-muted-foreground'>Syntax</p>
+
+```lua
+-- @param player (number) - The ID of the player
+-- @param plate (string) - The plate of the vehicle
+-- @param isSecondOwner (boolean) - Whether the player is the second owner
+-- @return (boolean) - Whether the owner was successfully set
+function SetOwner(player, plate, isSecondOwner)
+```
+
+<p className='text-sm text-muted-foreground'>Example usage</p>
+
+```lua
+local success = exports['fr_garages']:SetOwner(2, "FRACTIFY", false)
+print(success)
+```
+
+<p className='text-sm text-muted-foreground'>Example output</p>
+
+```lua
+true
+```
+
+## Client-side functions
+
+### `InZone`
+
+Returns whether the specified player is in the parking zone.
+
+<p className='text-sm text-muted-foreground'>Syntax</p>
+
+```lua
+function InZone()
+```
+
+<p className='text-sm text-muted-foreground'>Example usage</p>
+
+```lua
+if exports['fr_garages']:InZone() then
+    print("The player is in parking zone")
+end
+```
+
+<p className='text-sm text-muted-foreground'>Example output</p>
+
+```
+The player is in parking zone
+```
+
+### `CurrentParking`
+
+Returns the name of the current parking location.
+
+<p className='text-sm text-muted-foreground'>Syntax</p>
+
+```lua
+function CurrentParking()
+```
+
+<p className='text-sm text-muted-foreground'>Example usage</p>
+
+```lua
+local parking = exports['fr_garages']:CurrentParking()
+print(parking)
+```
+
+<p className='text-sm text-muted-foreground'>Example output</p>
+
+```lua
+"main"
+```

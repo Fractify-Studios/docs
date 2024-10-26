@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#nd-sidebar {
+  @apply border-r border-border;
+}
+
+#nd-sidebar > div:first-child {
+  @apply border-none;
+}
