@@ -2,7 +2,18 @@ import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 
 export const baseOptions: BaseLayoutProps = {
   nav: {
-    title: 'Fractify Studios',
+    title: (
+      <div className='flex items-center gap-2'>
+        <img
+          src='/favicon.ico'
+          alt='Fractify Studios'
+          className='h-6 w-6'
+          width={24}
+          height={24}
+        />
+        <span>Fractify Studios</span>
+      </div>
+    ),
     url: '/',
   },
   links: [

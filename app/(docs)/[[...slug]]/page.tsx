@@ -11,6 +11,7 @@ import { FileTextIcon } from '@radix-ui/react-icons';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { notFound } from 'next/navigation';
 import { source } from '@/lib/source';
+import { Metadata, Viewport } from 'next';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -138,7 +139,18 @@ export async function generateMetadata(props: {
   if (!page) notFound();
 
   return {
-    title: page.data.title,
+    title: `Fractify — ${page.data.title}`,
     description: page.data.description,
-  };
+    openGraph: {
+      type: 'website',
+      siteName: 'Fractify',
+      url: `https://fractify.pl`,
+      title: `Fractify Docs — ${page.data.title}`,
+      description: page.data.description,
+    },
+  } satisfies Metadata;
 }
+
+export const viewport: Viewport = {
+  themeColor: '#DA133D',
+};
