@@ -147,6 +147,13 @@ export async function generateMetadata(props: {
       url: `https://fractify.pl`,
       title: `Fractify Docs — ${page.data.title}`,
       description: page.data.description,
+      images: [
+        {
+          url: '/og-image.png',
+          width: 1920,
+          height: 1080,
+        },
+      ],
     },
   } satisfies Metadata;
 }
