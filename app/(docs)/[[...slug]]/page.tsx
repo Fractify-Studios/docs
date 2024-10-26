@@ -11,7 +11,7 @@ import { FileTextIcon } from '@radix-ui/react-icons';
 import defaultMdxComponents from 'fumadocs-ui/mdx';
 import { notFound } from 'next/navigation';
 import { source } from '@/lib/source';
-import { Metadata } from 'next';
+import { Metadata, Viewport } from 'next';
 
 export default async function Page(props: {
   params: Promise<{ slug?: string[] }>;
@@ -150,3 +150,7 @@ export async function generateMetadata(props: {
     },
   } satisfies Metadata;
 }
+
+export const viewport: Viewport = {
+  themeColor: '#DA133D',
+};
