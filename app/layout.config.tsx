@@ -1,3 +1,5 @@
+import { ExternalLinkIcon, LightningBoltIcon } from '@radix-ui/react-icons';
+
 import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 
 export const baseOptions: BaseLayoutProps = {
@@ -17,6 +19,16 @@ export const baseOptions: BaseLayoutProps = {
     url: '/',
   },
   links: [
+    {
+      text: "Pleb Masters Forge",
+      icon: (
+        <LightningBoltIcon
+          className='h-4 w-4'
+        />
+      ),
+      external: true,
+      url: 'https://forge.plebmasters.de/creators/fractify.studios'
+    },
     {
       text: 'Discord Server',
       icon: (
