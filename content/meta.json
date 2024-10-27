@@ -1,9 +1,11 @@
 {
   "pages": [
     "index",
+    "support",
     "---Scripts---",
     "garages",
-    "---Links---",
-    "[FiveM Docs](https://docs.fivem.net)"
+    "---Resources---",
+    "[FiveM Docs](https://docs.fivem.net)",
+    "[Cfx.re Status](https://status.cfx.re/)"
   ]
 }
