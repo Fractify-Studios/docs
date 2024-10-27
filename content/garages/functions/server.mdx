@@ -1,11 +1,9 @@
 ---
-title: Exports
-description: fr_garages Exports
-updated: 2024-10-26
+title: Server
+description: fr_garages Functions
+updated: 2024-10-27
 authors: [feenko, stripsior]
 ---
-
-## Server-side functions
 
 ### `GetVehicles`
 
@@ -124,53 +122,4 @@ print(success)
 
 ```lua
 true
-```
-
-## Client-side functions
-
-### `InZone`
-
-Returns whether the specified player is in the parking zone.
-
-<p className='text-sm text-muted-foreground'>Syntax</p>
-
-```lua
-function InZone()
-```
-
-<p className='text-sm text-muted-foreground'>Example usage</p>
-
-```lua
-if exports['fr_garages']:InZone() then
-    print("The player is in parking zone")
-end
-```
-
-<p className='text-sm text-muted-foreground'>Example output</p>
-
-```
-The player is in parking zone
-```
-
-### `CurrentParking`
-
-Returns the name of the current parking location.
-
-<p className='text-sm text-muted-foreground'>Syntax</p>
-
-```lua
-function CurrentParking()
-```
-
-<p className='text-sm text-muted-foreground'>Example usage</p>
-
-```lua
-local parking = exports['fr_garages']:CurrentParking()
-print(parking)
-```
-
-<p className='text-sm text-muted-foreground'>Example output</p>
-
-```lua
-"main"
 ```

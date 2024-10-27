@@ -149,7 +149,7 @@ export async function generateMetadata(props: {
       description: page.data.description,
       images: [
         {
-          url: '/og-image.png',
+          url: 'https://fractify.pl/og-image.png',
           width: 1920,
           height: 1080,
         },

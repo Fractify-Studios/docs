@@ -9,3 +9,13 @@
 #nd-sidebar > div:first-child {
   @apply border-none;
 }
+
+:root {
+  --fd-sidebar-width: 18rem;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --fd-sidebar-width: 0;
+  }
+}
