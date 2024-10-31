@@ -1,26 +1,25 @@
-# fractify-docs
+<br />
+<div align="center">
+  <a href="https://github.com/Fractify-Studios/garages">
+    <img src="https://cdn.fractify.pl/logo-no-background.png" alt="Logo" width="80" height="80">
+  </a>
 
-This is a Next.js application generated with
-[Create Fumadocs](https://github.com/fuma-nama/fumadocs).
+  <h3 align="center">docs</h3>
 
-Run development server:
+  <p align="center">
+    Documentation for all of the Fractify Studios scripts
+    <br />
+    <a href="https://fractify.pl/"><strong>Visit website »</strong></a>
+    <br />
+    <br />
+    <a href="https://discord.gg/fractify">Join Discord</a>
+  </p>
+</div>
 
-```bash
-npm run dev
-# or
-pnpm dev
-# or
-yarn dev
-```
+## Editing
 
-Open http://localhost:3000 with your browser to see the result.
+To install, run `pnpm install`.
 
-## Learn More
+To run a development server, run `pnpm dev`.
 
-To learn more about Next.js and Fumadocs, take a look at the following
-resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [Fumadocs](https://fumadocs.vercel.app) - learn about Fumadocs
+All of the contents can be found in the `/content` directory.
