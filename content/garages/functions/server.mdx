@@ -12,8 +12,8 @@ Returns a table of vehicles that are currently parked at the specified location.
 <p className='text-sm text-muted-foreground'>Syntax</p>
 
 ```lua
--- @param parking (string) - The name of the parking location
--- @return (table) - A table of vehicles that are currently parked at the specified location
+--- @param parking (string) - The name of the parking location
+--- @return (table) - A table of vehicles that are currently parked at the specified location
 function GetVehicles(parking)
 ```
 
@@ -53,10 +53,10 @@ Returns whether the specified player is the owner of the specified vehicle.
 <p className='text-sm text-muted-foreground'>Syntax</p>
 
 ```lua
--- @param player (number) - The ID of the player
--- @param plate (string) - The plate of the vehicle
--- @return (boolean) - Whether the specified player is the owner of the specified vehicle
-function IsPlayerOwner(player, plate)
+--- @param playerId (number) - The ID of the player
+--- @param plate (string) - The plate of the vehicle
+--- @return (boolean) - Whether the specified player is the owner of the specified vehicle
+function IsPlayerOwner(playerId, plate)
 ```
 
 <p className='text-sm text-muted-foreground'>Example usage</p>
@@ -79,8 +79,8 @@ Returns whether the specified vehicle is currently parked.
 <p className='text-sm text-muted-foreground'>Syntax</p>
 
 ```lua
--- @param plate (string) - The plate of the vehicle
--- @return (boolean) - Whether the specified vehicle is currently parked
+--- @param plate (string) - The plate of the vehicle
+--- @return (boolean) - Whether the specified vehicle is currently parked
 function IsCarParked(plate)
 ```
 
@@ -104,11 +104,11 @@ Sets the owner of the specified vehicle.
 <p className='text-sm text-muted-foreground'>Syntax</p>
 
 ```lua
--- @param player (number) - The ID of the player
--- @param plate (string) - The plate of the vehicle
--- @param isSecondOwner (boolean) - Whether the player is the second owner
--- @return (boolean) - Whether the owner was successfully set
-function SetOwner(player, plate, isSecondOwner)
+--- @param playerId (number) - The ID of the player
+--- @param plate (string) - The plate of the vehicle
+--- @param second? (boolean) - Whether the player is the second owner
+--- @return (boolean) - Whether the owner was successfully set
+function SetOwner(playerId, plate, second)
 ```
 
 <p className='text-sm text-muted-foreground'>Example usage</p>
