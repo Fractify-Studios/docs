@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <body className='flex min-h-screen flex-col'>
         <Banner className='border-b border-border bg-card'>
           <a
-            href='https://discord.gg/fractify'
+            href='https://discord.gg/HCXhNYeVMb'
             target='_blank'
             rel='noreferrer noopener'
             className='underline-offset-2 hover:underline'
