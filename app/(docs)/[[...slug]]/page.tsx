@@ -144,14 +144,14 @@ export async function generateMetadata(props: {
     openGraph: {
       type: 'website',
       siteName: 'Fractify',
-      url: `https://fractify.pl`,
+      url: `https://docs.fractify.pl`,
       title: `Fractify Docs — ${page.data.title}`,
       description: page.data.description,
       images: [
         {
-          url: 'https://fractify.pl/og-image.png',
+          url: 'https://public.fractify.pl/Banner.png',
           width: 1920,
-          height: 1080,
+          height: 804,
         },
       ],
     },
@@ -159,5 +159,5 @@ export async function generateMetadata(props: {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#DA133D',
+  themeColor: '#ebebeb',
 };
