@@ -35,7 +35,7 @@ export const baseOptions: BaseLayoutProps = {
         </svg>
       ),
       external: true,
-      url: 'https://discord.gg/fractify',
+      url: 'https://discord.gg/HCXhNYeVMb',
     },
   ],
   i18n: false,
